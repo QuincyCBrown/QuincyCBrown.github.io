@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quincy Brown — Resume</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23C6432B'/><text x='50' y='68' font-size='55' font-family='Arial Black' fill='%23EDEAE2' text-anchor='middle'>Q</text></svg>">
 <style>
 
   /* ---------- Tokens ---------- */
@@ -65,9 +66,29 @@
 
   /* ---------- Hero ---------- */
   .hero {
-    padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 40px;
   }
+  .hero-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .avatar {
+    flex-shrink: 0;
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    background: var(--plate);
+    color: var(--paper);
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
   .hero .eyebrow {
     color: var(--red);
     font-weight: 700;
@@ -89,12 +110,26 @@
   .contact-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 12px;
     margin-top: 28px;
-    font-size: 0.95rem;
-    color: var(--ink-soft);
   }
-  .contact-row a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--red); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+  }
+  .btn.primary {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--paper);
+  }
 
   /* ---------- Section headers ---------- */
   .section-head {
@@ -173,6 +208,9 @@
 
   @media (max-width: 600px) {
     .job-meta { text-align: left; }
+    .avatar { width: 64px; height: 64px; font-size: 1.6rem; }
+    .hero { padding-top: 50px; }
+    section { padding: 44px 20px; }
   }
 
 </style>
@@ -180,17 +218,33 @@
 <body>
 
   <section class="hero">
-    <div class="eyebrow">Sacramento, CA</div>
-    <h1>Quincy Brown</h1>
+    <div class="hero-top">
+      <div class="avatar">
+        <!-- Swap this for a real photo: <img src="photo.jpg" alt="Quincy Brown"> -->
+        Q
+      </div>
+      <div>
+        <div class="eyebrow">Sacramento, CA</div>
+        <h1>Quincy Brown</h1>
+      </div>
+    </div>
     <p class="tagline">Customer-facing pro moving into fitness coaching and marketing —
       built on retail, sales, and community work, training toward a CPT certification.</p>
     <div class="rep-line">
       <div class="plate"></div><div class="plate"></div><div class="bar"></div>
     </div>
     <div class="contact-row">
-      <span>(205) 872-9134</span>
-      <a href="mailto:qbrown717@gmail.com">qbrown717@gmail.com</a>
+      <a class="btn primary" href="mailto:qbrown717@gmail.com">Email Me</a>
+      <a class="btn" href="tel:2058729134">(205) 872-9134</a>
     </div>
+  </section>
+
+  <section id="about" style="padding-bottom: 0;">
+    <p style="color: var(--ink-soft); font-size: 1rem; max-width: 620px;">
+      19 years old, based in Sacramento. Strong in customer-facing work, sales,
+      and physical fitness — currently pursuing a Certified Personal Trainer
+      certification while working toward a Communications/Marketing degree.
+    </p>
   </section>
 
   <section id="experience">
