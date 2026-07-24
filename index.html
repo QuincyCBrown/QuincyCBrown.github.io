@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quincy Brown — Resume</title>
+<style>
+
+  /* ---------- Tokens ---------- */
+  :root{
+    --paper: #EDEAE2;
+    --ink: #1A1D1A;
+    --ink-soft: #4B4F49;
+    --red: #C6432B;
+    --plate: #26332B;
+    --line: #d4cfc2;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, .display {
+    font-family: 'Archivo Black', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    margin: 0;
+  }
+
+  a { color: var(--red); }
+
+  section {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+
+  /* ---------- Rep-line divider (signature element) ---------- */
+  .rep-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 8px 0 36px;
+  }
+  .rep-line .plate {
+    width: 26px;
+    height: 8px;
+    background: var(--plate);
+    border-radius: 2px;
+  }
+  .rep-line .plate:nth-child(1){ width: 40px; }
+  .rep-line .bar {
+    flex: 1;
+    height: 3px;
+    background: var(--line);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+  .hero .eyebrow {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 7vw, 4.2rem);
+    line-height: 0.98;
+  }
+  .hero p.tagline {
+    max-width: 520px;
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    margin-top: 18px;
+  }
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 28px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .contact-row a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--red); }
+
+  /* ---------- Section headers ---------- */
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+  .section-head .num {
+    color: var(--red);
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 0.9rem;
+  }
+  .section-head h2 {
+    font-size: 1.5rem;
+  }
+
+  /* ---------- Experience ---------- */
+  .job {
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .job:last-child { border-bottom: 1px solid var(--line); }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .job-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .job-meta {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    text-align: right;
+  }
+  .job ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    color: var(--ink-soft);
+  }
+  .job li { margin-bottom: 6px; }
+
+  /* ---------- Skills ---------- */
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .skill {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.35);
+  }
+  .skill.core::before {
+    content: "";
+  }
+
+  /* ---------- Education ---------- */
+  .edu-title { font-weight: 700; font-size: 1.05rem; }
+  .edu-meta { color: var(--ink-soft); font-size: 0.9rem; margin-top: 2px; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    text-align: center;
+    padding: 40px 24px 70px;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 600px) {
+    .job-meta { text-align: left; }
+  }
+
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="eyebrow">Sacramento, CA</div>
+    <h1>Quincy Brown</h1>
+    <p class="tagline">Customer-facing pro moving into fitness coaching and marketing —
+      built on retail, sales, and community work, training toward a CPT certification.</p>
+    <div class="rep-line">
+      <div class="plate"></div><div class="plate"></div><div class="bar"></div>
+    </div>
+    <div class="contact-row">
+      <span>(205) 872-9134</span>
+      <a href="mailto:qbrown717@gmail.com">qbrown717@gmail.com</a>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-head"><span class="num">01</span><h2>Experience</h2></div>
+    <div class="rep-line"><div class="plate"></div><div class="bar"></div></div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Marketing Representative — LeafFilter</div>
+        <div class="job-meta">Birmingham, AL / Sacramento, CA<br>Jan 2026 – Mar 2026</div>
+      </div>
+      <ul>
+        <li>Engaged with hundreds of customers face-to-face, generating qualified leads.</li>
+        <li>Educated homeowners on company services and adapted pitch on the spot.</li>
+        <li>Built communication and confidence skills through daily field work.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Loader — Garden, Lumber & Fulfillment, Lowe's</div>
+        <div class="job-meta">Fultondale, AL<br>Feb 2025 – Feb 2026</div>
+      </div>
+      <ul>
+        <li>Fulfilled pickup and delivery orders accurately in a fast-paced environment.</li>
+        <li>Assisted customers with loading large purchases safely and professionally.</li>
+        <li>Verified inventory, resolved order discrepancies, coordinated across departments.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Cashier — Five Below</div>
+        <div class="job-meta">Fultondale, AL<br>Nov 2023 – Aug 2024</div>
+      </div>
+      <ul>
+        <li>Delivered friendly service in a high-volume retail environment.</li>
+        <li>Processed transactions accurately and kept the sales floor organized.</li>
+        <li>Resolved customer concerns professionally.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Volunteer — Sacramento Association of REALTORS&reg;</div>
+        <div class="job-meta">Sacramento, CA<br>2026</div>
+      </div>
+      <ul>
+        <li>Supported Rebuilding Sacramento home improvement projects.</li>
+        <li>Registered attendees and assisted guests at a First-Time Homebuyer Expo.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="fitness">
+    <div class="section-head"><span class="num">02</span><h2>Fitness</h2></div>
+    <div class="rep-line"><div class="plate"></div><div class="bar"></div></div>
+    <ul style="color: var(--ink-soft); padding-left: 18px;">
+      <li>Strength training consistently for 18+ months, tracking progress over time.</li>
+      <li>Solid grasp of proper exercise form and gym etiquette.</li>
+      <li>Comfortable welcoming members and guiding them around equipment and the facility.</li>
+      <li>Working toward ISSA Certified Personal Trainer certification + CPR/AED.</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <div class="section-head"><span class="num">03</span><h2>Education</h2></div>
+    <div class="rep-line"><div class="plate"></div><div class="bar"></div></div>
+    <div class="edu-title">The University of Alabama — BFA Theatre</div>
+    <div class="edu-meta">Tuscaloosa, AL &nbsp;|&nbsp; 2024 – 2025</div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head"><span class="num">04</span><h2>Skills</h2></div>
+    <div class="rep-line"><div class="plate"></div><div class="bar"></div></div>
+    <div class="skill-grid">
+      <div class="skill">Customer Service</div>
+      <div class="skill">Communication</div>
+      <div class="skill">Relationship Building</div>
+      <div class="skill">Teamwork</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Time Management</div>
+      <div class="skill">Sales & Lead Generation</div>
+      <div class="skill">Conflict Resolution</div>
+      <div class="skill">Retail Operations</div>
+      <div class="skill">Fitness & Wellness</div>
+      <div class="skill">Strength Training</div>
+      <div class="skill">Adaptability</div>
+      <div class="skill">Organization</div>
+      <div class="skill">Positive Attitude</div>
+    </div>
+  </section>
+
+  <footer>
+    Built by Quincy Brown &middot; Sacramento, CA
+  </footer>
+
+</body>
+</html>
