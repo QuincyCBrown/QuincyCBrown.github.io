@@ -241,6 +241,46 @@ h1, h2, h3 {
 .edu-title { font-weight: 700; font-size: 1.05rem; color: #F0EFF2; }
 .edu-meta { color: var(--ink-soft); font-size: 0.9rem; margin-top: 2px; }
 
+/* ---------- Social cards ---------- */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+.social-card:hover { border-color: var(--purple); }
+.social-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+}
+.social-icon svg { width: 20px; height: 20px; }
+.social-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #F0EFF2;
+}
+.social-handle {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
 /* ---------- Footer ---------- */
 footer {
   text-align: center;
